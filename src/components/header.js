@@ -8,6 +8,7 @@ const Header = () => {
     query {
       site {
         siteMetadata {
+          title
           author
         }
       }

@@ -1,6 +1,7 @@
 import React from "react"
-import Layout from "../components/layout"
 import { Link, graphql, useStaticQuery } from "gatsby"
+
+import Layout from "../components/layout"
 import projectStyles from "./projects.module.scss"
 import Head from "../components/head"
 
@@ -14,8 +15,6 @@ const ProjectsPage = () => {
               title
               date
             }
-            html
-            excerpt
             fields {
               slug
             }
@@ -28,22 +27,20 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <Head title="Projects">
-        <div>
-          <h1>Projects</h1>
-          <ol className={projectStyles.posts}>
-            {data.allMarkdownRemark.edges.map(edge => {
-              return (
-                <li className={projectStyles.post}>
-                  <Link to={`/projects/${edge.node.fields.slug}`}>
-                    <h2>{edge.node.frontmatter.title}</h2>
+        <h1>Projects</h1>
+        <ol className={projectStyles.posts}>
+          {data.allMarkdownRemark.edges.map(edge => {
+            return (
+              <li key={edge.node.fields.slug} className={projectStyles.post}>
+                <Link to={`/projects/${edge.node.fields.slug}`}>
+                  <h2>{edge.node.frontmatter.title}</h2>
 
-                    <p>{edge.node.frontmatter.date}</p>
-                  </Link>
-                </li>
-              )
-            })}
-          </ol>
-        </div>
+                  <p>{edge.node.frontmatter.date}</p>
+                </Link>
+              </li>
+            )
+          })}
+        </ol>
       </Head>
     </Layout>
   )
