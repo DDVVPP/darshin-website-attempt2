@@ -26,22 +26,21 @@ const ProjectsPage = () => {
 
   return (
     <Layout>
-      <Head title="Projects">
-        <h1>Projects</h1>
-        <ol className={projectStyles.posts}>
-          {data.allMarkdownRemark.edges.map(edge => {
-            return (
-              <li key={edge.node.fields.slug} className={projectStyles.post}>
-                <Link to={`/projects/${edge.node.fields.slug}`}>
-                  <h2>{edge.node.frontmatter.title}</h2>
+      <Head title="Projects" />
+      <h1>Projects</h1>
+      <ol className={projectStyles.posts}>
+        {data.allMarkdownRemark.edges.map(edge => {
+          return (
+            <li key={edge.node.fields.slug} className={projectStyles.post}>
+              <Link to={`/projects/${edge.node.fields.slug}`}>
+                <h2>{edge.node.frontmatter.title}</h2>
 
-                  <p>{edge.node.frontmatter.date}</p>
-                </Link>
-              </li>
-            )
-          })}
-        </ol>
-      </Head>
+                <p>{edge.node.frontmatter.date}</p>
+              </Link>
+            </li>
+          )
+        })}
+      </ol>
     </Layout>
   )
 }
