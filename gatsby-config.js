@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: "Darshin's Professional Website",
+    title: "Darshin Van Parijs",
     author: "Darshin Van Parijs",
   },
   plugins: [
@@ -20,6 +20,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {

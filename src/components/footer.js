@@ -14,7 +14,7 @@ const Footer = () => {
   `)
 
   return (
-    <footer className={footerStyles.footer}>
+    <footer className={footerStyles.siteFoot}>
       &copy; {new Date().getFullYear()} {data.site.siteMetadata.author} &mdash;
       Built with{" "}
       <a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">

@@ -1,29 +1,128 @@
-.header {
-  padding: 1rem 0 3rem;
-}
-.title {
-  color: black;
-  font-size: 3rem;
-  text-decoration: none;
+// .header {
+//   padding: 1rem 0 3rem;
+// }
+// .title {
+//   color: black;
+//   font-size: 3rem;
+//   text-decoration: none;
+// }
+
+// .nav-list {
+//   display: flex;
+//   list-style-type: none;
+//   margin: 0;
+// }
+
+// .nav-item {
+//   color: #999999;
+//   font-size: 0.9rem;
+//   margin-right: 1.3rem;
+//   text-decoration: none;
+// }
+
+// .nav-item:hover {
+//   color: #666666;
+// }
+
+// .active-nav-item {
+//   color: #333333;
+// }
+
+/* Site Navigation
+/* ---------------------------------------------------------- */
+
+.site-head {
+  position: relative;
+  z-index: 300;
+  margin-top: -10px;
+  font-size: 1.35rem;
 }
 
-.nav-list {
+.site-head-container {
   display: flex;
-  list-style-type: none;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-item {
-  color: #999999;
-  font-size: 0.9rem;
-  margin-right: 1.3rem;
+.site-head-left {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  margin: 0 0 0 -12px;
+  padding: 0;
+  list-style: none;
+}
+
+.site-head li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.site-head-left a,
+.site-head-right a {
+  display: block;
+  margin: 0;
+  padding: 10px 12px;
+  color: var(--color-base);
+  font-weight: 600;
+  opacity: 0.4;
   text-decoration: none;
 }
 
-.nav-item:hover {
-  color: #666666;
+.nav-current a,
+.site-head a:hover {
+  text-decoration: none;
+  opacity: 1;
 }
 
-.active-nav-item {
-  color: #333333;
+.site-head-center {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.site-head-logo {
+  flex-shrink: 0;
+  display: block;
+  padding: 10px;
+  color: var(--color-base);
+  font-size: 2.1rem;
+  line-height: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.site-head-logo:hover {
+  text-decoration: none;
+}
+
+.site-head-logo img {
+  display: block;
+  margin-top: 2px;
+  width: auto;
+  height: 28px;
+}
+
+.site-head-right {
+  position: relative;
+  z-index: 100;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.social-links {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }

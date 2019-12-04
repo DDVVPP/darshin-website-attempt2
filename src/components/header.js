@@ -4,6 +4,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
+  const [toggleNav, setToggleNav] = React.useState(false)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -16,81 +17,79 @@ const Header = () => {
   `)
 
   return (
-    <header className={headerStyles.header}>
-      <h1>
-        <Link className={headerStyles.title} to="/">
-          {data.site.siteMetadata.author}
-        </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/projects"
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/illustration"
-            >
-              Illustration
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/ceramics"
-            >
-              Ceramics
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <div className="social-links">
+    <header className={headerStyles.siteHead}>
+      <div className={headerStyles.siteHeadContainer}>
         <a
-          className={headerStyles.navItem}
-          href="/resume.pdf"
-          title="Resume"
-          target="_blank"
-          rel="noopener noreferrer"
+          className={headerStyles.navBurger}
+          href={`#`}
+          onClick={() => setToggleNav(!toggleNav)}
         >
-          Resume
-        </a>
-        <a
-          className={headerStyles.navItem}
-          href="https://www.linkedin.com/in/darshinvanparijs"
-          title="LinkedIn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
+          <div
+            className={headerStyles.hamburger}
+            aria-label="Menu"
+            role="button"
+            aria-controls="navigation"
+          >
+            <div className={headerStyles.hamburgerBox}>
+              <div className={headerStyles.hamburgerInner} />
+            </div>
+          </div>
         </a>
 
-        <a
-          className={headerStyles.navItem}
-          href="https://github.com/DDVVPP/darshin-creates"
-          title="GitHub"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
+        <nav className={headerStyles.siteHeadLeft}>
+          <ul className={headerStyles.nav} role="menu">
+            <li className={headerStyles.nav} role="menuitem">
+              <Link to="/">Home</Link>
+            </li>
+            <li className={headerStyles.nav} role="menuitem">
+              <Link to="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="/illustration">Illustration</Link>
+            </li>
+            <li className={headerStyles.nav}>
+              <Link to="/ceramics">Ceramics</Link>
+            </li>
+          </ul>
+        </nav>
+        <div className={headerStyles.siteHeadCenter}>
+          {" "}
+          <Link className={headerStyles.siteHeadLogo} to="/">
+            {data.site.siteMetadata.author}
+          </Link>
+        </div>
+        <div className={headerStyles.siteHeadRight}>
+          <div className={headerStyles.socialLinks}>
+            <a
+              className={headerStyles.navItem}
+              href="/resume.pdf"
+              title="Resume"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resume
+            </a>
+            <a
+              className={headerStyles.navItem}
+              href="https://www.linkedin.com/in/darshinvanparijs"
+              title="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              className={headerStyles.navItem}
+              href="https://github.com/DDVVPP/darshin-creates"
+              title="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
       </div>
     </header>
   )

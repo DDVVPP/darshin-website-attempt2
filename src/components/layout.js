@@ -1,16 +1,26 @@
 import React from "react"
 import Header from "./header"
 import Footer from "./footer"
-import "../styles/index.scss"
+// import "../styles/index.scss"
+import "../styles/global.scss"
+import "../styles/vars.scss"
+
 import layoutStyles from "./layout.module.scss"
 
 const Layout = props => {
+  const [toggleNav, setToggleNav] = React.useState(false)
   return (
-    <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
-        <Header />
-        {props.children}
-      </div>
+    <div
+      className={`${layoutStyles.siteWrapper} ${
+        toggleNav ? `${layoutStyles.siteHeadOpen}` : ``
+      }`}
+    >
+      <Header />
+      <main id="site-main" className={layoutStyles.siteMain}>
+        <div id="swup" className={layoutStyles.transitionFade}>
+          {props.children}
+        </div>
+      </main>
 
       <Footer />
     </div>
