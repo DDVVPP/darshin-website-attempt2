@@ -27,17 +27,22 @@ const ProjectsPage = () => {
   return (
     <Layout>
       <Head title="Projects" />
-      <h1>Projects</h1>
-      <ol className={projectStyles.posts}>
+      <h1 className={projectStyles.postFeed}>Projects</h1>
+      <ol className={projectStyles.postFeed}>
         {data.allMarkdownRemark.edges.map(edge => {
           return (
-            <li key={edge.node.fields.slug} className={projectStyles.post}>
-              <Link to={`/projects/${edge.node.fields.slug}`}>
-                <h2>{edge.node.frontmatter.title}</h2>
-
-                <p>{edge.node.frontmatter.date}</p>
+            <article className={projectStyles.postCard}>
+              <Link
+                className={projectStyles.postCardLink}
+                to={`/projects/${edge.node.fields.slug}`}
+              >
+                <div className={projectStyles.postCardContent}>
+                  <h2 className={projectStyles.postCardTitle}>
+                    {edge.node.frontmatter.title}
+                  </h2>
+                </div>
               </Link>
-            </li>
+            </article>
           )
         })}
       </ol>

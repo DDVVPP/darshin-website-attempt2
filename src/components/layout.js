@@ -6,7 +6,7 @@ import "../styles/index.scss"
 import layoutStyles from "./layout.module.scss"
 
 const Layout = props => {
-  const [toggleNav, setToggleNav] = React.useState(false)
+  const [toggleNav] = React.useState(false)
   return (
     <div
       className={`${layoutStyles.siteWrapper} ${

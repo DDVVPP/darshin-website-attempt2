@@ -1,36 +1,5 @@
-// .header {
-//   padding: 1rem 0 3rem;
-// }
-// .title {
-//   color: black;
-//   font-size: 3rem;
-//   text-decoration: none;
-// }
-
-// .nav-list {
-//   display: flex;
-//   list-style-type: none;
-//   margin: 0;
-// }
-
-// .nav-item {
-//   color: #999999;
-//   font-size: 0.9rem;
-//   margin-right: 1.3rem;
-//   text-decoration: none;
-// }
-
-// .nav-item:hover {
-//   color: #666666;
-// }
-
-// .active-nav-item {
-//   color: #333333;
-// }
-
 /* Site Navigation
 /* ---------------------------------------------------------- */
-
 .site-head {
   position: relative;
   z-index: 300;
@@ -39,21 +8,33 @@
 }
 
 .site-head-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-head-left {
   position: relative;
   z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 10px;
   white-space: nowrap;
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 0 0 -12px;
   padding: 0;
@@ -85,13 +66,18 @@
 
 .site-head-center {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 
 .site-head-logo {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   display: block;
   padding: 10px;
   color: black;
@@ -117,13 +103,24 @@
 .site-head-right {
   position: relative;
   z-index: 100;
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social-links {
-  flex-shrink: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+/*# sourceMappingURL=header.module.css.map */

@@ -4,7 +4,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
 
 const Header = () => {
-  const [toggleNav, setToggleNav] = React.useState(false)
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -19,28 +18,8 @@ const Header = () => {
   return (
     <header className={headerStyles.siteHead}>
       <div className={headerStyles.siteHeadContainer}>
-        <a
-          className={headerStyles.navBurger}
-          href={`#`}
-          onClick={() => setToggleNav(!toggleNav)}
-        >
-          <div
-            className={headerStyles.hamburger}
-            aria-label="Menu"
-            role="button"
-            aria-controls="navigation"
-          >
-            <div className={headerStyles.hamburgerBox}>
-              <div className={headerStyles.hamburgerInner} />
-            </div>
-          </div>
-        </a>
-
         <nav className={headerStyles.siteHeadLeft}>
           <ul className={headerStyles.nav} role="menu">
-            <li className={headerStyles.nav} role="menuitem">
-              <Link to="/">Home</Link>
-            </li>
             <li className={headerStyles.nav} role="menuitem">
               <Link to="/projects">Projects</Link>
             </li>
@@ -53,7 +32,6 @@ const Header = () => {
           </ul>
         </nav>
         <div className={headerStyles.siteHeadCenter}>
-          {" "}
           <Link className={headerStyles.siteHeadLogo} to="/">
             {data.site.siteMetadata.author}
           </Link>
