@@ -147,7 +147,6 @@
   margin: 0;
   font-size: 7rem;
   line-height: 1.1em;
-  font-weight: var(--font-heavy);
   letter-spacing: 10px;
 }
 
@@ -155,7 +154,6 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: color(var(--color-base) l(50%));
 }
 
 .error-link {
@@ -167,7 +165,6 @@
 .page-head-title {
   margin: 0;
   font-size: 4.2rem;
-  color: var(--color-base);
 }
 
 @media (max-width: 500px) {
@@ -178,7 +175,6 @@
 
 .page-head-description {
   margin: 0 0 1.6vw;
-  color: color(var(--color-border) l(-20%));
   font-size: 2.2rem;
   line-height: 1.35em;
 }
@@ -192,12 +188,7 @@
 .site-foot {
   margin: 3vw 0 1vw;
   text-align: center;
-  color: color(var(--color-border) l(-20%));
   font-size: 1.4rem;
-}
-
-.site-foot a {
-  color: var(--color-base);
 }
 
 .transition-fade {
@@ -353,7 +344,7 @@
             transform: scale(1) translateY(0px);
   }
   .site-head-open .nav-current a {
-    border-bottom: var(--color-base) 2px solid;
+    border-bottom: black;
   }
   .site-head-open .site-head-right a {
     opacity: 0.5;
@@ -395,10 +386,10 @@
   -webkit-box-flex: 20rem;
       -ms-flex: 20rem;
           flex: 20rem;
+  height: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 20rem;
   background: #f35050;
   overflow: hidden;
 }

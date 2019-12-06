@@ -1,8 +1,28 @@
 import React from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
+
 import Layout from "../components/layout"
 import Head from "../components/head"
 
 const IllustrationPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <Head title="Illustration" />
