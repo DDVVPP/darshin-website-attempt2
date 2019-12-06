@@ -2,9 +2,8 @@
 /* ---------------------------------------------------------- */
 .site-head {
   position: relative;
-  z-index: 300;
-  margin-top: -10px;
-  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .site-head-container {
@@ -14,9 +13,20 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+}
+
+.navList li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .site-head-left {
@@ -25,43 +35,32 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 10px;
   white-space: nowrap;
 }
 
-.nav {
+.site-head-left a:hover,
+.site-head-right a:hover {
+  color: #acacad;
+}
+
+.site-head-right {
+  position: relative;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 0 -12px;
-  padding: 0;
-  list-style: none;
-}
-
-.site-head li {
-  display: block;
-  margin: 0;
-  padding: 0;
+  white-space: nowrap;
 }
 
 .site-head-left a,
 .site-head-right a {
   display: block;
   margin: 0;
-  padding: 10px 12px;
-  color: #4d4b4b;
-  font-weight: 600;
-  opacity: 0.4;
+  padding-right: 1rem;
+  padding-top: 0.4rem;
+  color: #868688;
+  font-weight: 400;
   text-decoration: none;
-}
-
-.nav-current a,
-.site-head a:hover {
-  text-decoration: none;
-  opacity: 1;
 }
 
 .site-head-center {
@@ -83,7 +82,7 @@
   color: black;
   font-size: 1.2rem;
   line-height: 1em;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
@@ -91,36 +90,9 @@
 
 .site-head-logo:hover {
   text-decoration: none;
+  color: #4b4b4b;
 }
 
-.site-head-logo img {
-  display: block;
-  margin-top: 2px;
-  width: auto;
-  height: 28px;
-}
-
-.site-head-right {
-  position: relative;
-  z-index: 100;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.social-links {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+/* Mobile Nav Menu
+/* ---------------------------------------------------------- */
 /*# sourceMappingURL=header.module.css.map */

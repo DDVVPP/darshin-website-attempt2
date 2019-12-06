@@ -7,20 +7,25 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .post-card {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0.5rem;
+  -webkit-box-flex: 20rem;
+      -ms-flex: 20rem;
+          flex: 20rem;
+  height: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
-  height: 35vw;
-  background: linear-gradient(135deg, #1f1f1f 0%, #6b6b6b 100%) center center;
-  background-size: cover;
+  background: #f35050;
   overflow: hidden;
 }
 
@@ -44,6 +49,10 @@
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   display: block;
+}
+
+.post-card-link:hover {
+  background: #fff;
 }
 
 .post-card-content {
@@ -88,8 +97,10 @@
 .post-card-title {
   margin: 0;
   display: inline-block;
-  font-size: 3.4rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   max-width: 70%;
   text-align: center;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=projects.module.css.map */

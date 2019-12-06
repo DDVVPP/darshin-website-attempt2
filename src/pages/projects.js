@@ -2,7 +2,8 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import projectStyles from "./projects.module.scss"
+
+import projectStyles from "../styles/projects.module.scss"
 import Head from "../components/head"
 
 const ProjectsPage = () => {

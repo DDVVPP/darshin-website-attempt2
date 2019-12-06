@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import headerStyles from "./header.module.scss"
+import headerStyles from "../styles/header.module.scss"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -14,22 +14,36 @@ const Header = () => {
       }
     }
   `)
-
+  // const [toggleNav, setToggleNav] = React.useState(false)
   return (
     <header className={headerStyles.siteHead}>
       <div className={headerStyles.siteHeadContainer}>
-        <nav className={headerStyles.siteHeadLeft}>
-          <ul className={headerStyles.nav} role="menu">
-            <li className={headerStyles.nav} role="menuitem">
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/illustration">Illustration</Link>
-            </li>
-            <li className={headerStyles.nav}>
-              <Link to="/ceramics">Ceramics</Link>
-            </li>
-          </ul>
+        {/* <a
+          className="nav-burger"
+          href={`#`}
+          onClick={() => setToggleNav(!toggleNav)}
+        >
+          <div
+            className="hamburger hamburger--collapse"
+            aria-label="Menu"
+            role="button"
+            aria-controls="navigation"
+          >
+            <div className="hamburger-box">
+              <div className="hamburger-inner" />
+            </div>
+          </div>
+        </a> */}
+        <nav className={headerStyles.navList} role="menu">
+          <li className={headerStyles.siteHeadLeft} role="menuitem">
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li className={headerStyles.siteHeadLeft} role="menuitem">
+            <Link to="/illustration">Illustration</Link>
+          </li>
+          <li className={headerStyles.siteHeadLeft} role="menuitem">
+            <Link to="/ceramics">Ceramics</Link>
+          </li>
         </nav>
         <div className={headerStyles.siteHeadCenter}>
           <Link className={headerStyles.siteHeadLogo} to="/">
@@ -37,9 +51,8 @@ const Header = () => {
           </Link>
         </div>
         <div className={headerStyles.siteHeadRight}>
-          <div className={headerStyles.socialLinks}>
+          <nav className={headerStyles.navList}>
             <a
-              className={headerStyles.navItem}
               href="/resume.pdf"
               title="Resume"
               target="_blank"
@@ -48,7 +61,6 @@ const Header = () => {
               Resume
             </a>
             <a
-              className={headerStyles.navItem}
               href="https://www.linkedin.com/in/darshinvanparijs"
               title="LinkedIn"
               target="_blank"
@@ -58,7 +70,6 @@ const Header = () => {
             </a>
 
             <a
-              className={headerStyles.navItem}
               href="https://github.com/DDVVPP/darshin-creates"
               title="GitHub"
               target="_blank"
@@ -66,7 +77,7 @@ const Header = () => {
             >
               GitHub
             </a>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
