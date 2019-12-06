@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
+import projectTemplateStyles from "../styles/projectTemplate.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
@@ -21,8 +22,9 @@ const ProjectTemplate = props => {
     <Layout>
       <Head title={props.data.markdownRemark.frontmatter.title} />
       <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
+
       <div
+        className={projectTemplateStyles.content}
         dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
       ></div>
     </Layout>

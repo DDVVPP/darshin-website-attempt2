@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,WAAW,EAAE,GAAG;EAChB,YAAY,EAAE,GAAG;EACjB,eAAe,EAAE,MAAM;CACxB",
+    "sources": [
+        "projectTemplate.module.scss"
+    ],
+    "names": [],
+    "file": "projectTemplate.module.css"
+}

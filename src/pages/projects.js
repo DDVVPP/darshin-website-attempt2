@@ -15,6 +15,7 @@ const ProjectsPage = () => {
             frontmatter {
               title
               date
+              description
             }
             fields {
               slug
@@ -40,6 +41,9 @@ const ProjectsPage = () => {
                 <div className={projectStyles.postCardContent}>
                   <h2 className={projectStyles.postCardTitle}>
                     {edge.node.frontmatter.title}
+                    <p className={projectStyles.postCardDescription}>
+                      {edge.node.frontmatter.description}
+                    </p>
                   </h2>
                 </div>
               </Link>

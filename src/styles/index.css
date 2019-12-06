@@ -3,7 +3,7 @@
   margin-top: 3rem;
   text-align: center;
   color: #000000;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .site-foot a {
@@ -16,7 +16,7 @@
 .site-head {
   position: relative;
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .site-head-container {
@@ -53,23 +53,38 @@
 
 .site-head-left a:hover,
 .site-head-right a:hover {
+  transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
   color: #acacad;
 }
 
 .site-head-right {
   position: relative;
   z-index: 100;
+  margin-right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
 }
 
-.site-head-left a,
-.site-head-right a {
+.site-head-left a {
   display: block;
   margin: 0;
   padding-right: 1rem;
+  padding-left: 0.3rem;
+  padding-top: 0.4rem;
+  color: #868688;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.site-head-right a {
+  display: block;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 0.3rem;
   padding-top: 0.4rem;
   color: #868688;
   font-weight: 400;
@@ -93,7 +108,7 @@
   display: block;
   padding: 10px;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1em;
   font-weight: 400;
   text-transform: uppercase;
@@ -103,6 +118,9 @@
 
 .site-head-logo:hover {
   text-decoration: none;
+  transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
   color: #4b4b4b;
 }
 
@@ -382,15 +400,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0.5rem;
-  -webkit-box-flex: 20rem;
-      -ms-flex: 20rem;
-          flex: 20rem;
-  height: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #f35050;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.3333%;
+          flex: 1 1 33.3333%;
+  height: 30vw;
+  background: #ff5c5c;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -416,10 +431,6 @@
   display: block;
 }
 
-.post-card-link:hover {
-  background: #fff;
-}
-
 .post-card-content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -439,10 +450,14 @@
   bottom: 0;
   left: 0;
   color: #fff;
-  background: rgba(0, 0, 0, 0.1);
-  opacity: 1;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
-  transition: opacity 0.5s cubic-bezier(0.33, 0, 0.2, 1);
+  border: 0.2rem solid white;
+}
+
+.post-card-content:hover {
+  transition: 0.25s ease-in;
+  -moz-transition: 0.25s ease-in;
+  -webkit-transition: 0.25s ease-in;
+  background: #fd2f41;
 }
 
 .post-card.with-image .post-card-content {
@@ -455,18 +470,41 @@
   }
 }
 
-.post-card-link:hover {
-  background: #00e1ff;
-}
-
 .post-card-title {
   margin: 0;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   max-width: 70%;
   text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 1px;
+  opacity: 0.5;
+  transition: opacity 0.25s ease-in;
+  -moz-transition: opacity 0.25s ease-in;
+  -webkit-transition: opacity 0.25s ease-in;
+}
+
+.post-card-content:hover .post-card-title {
+  opacity: 1;
+}
+
+.post-card-description {
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 0.8rem;
+  max-width: 80%;
+  font-weight: 400;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+  -moz-transition: opacity 0.8s ease-in;
+  -webkit-transition: opacity 0.8s ease-in;
+}
+
+.post-card-content:hover .post-card-description {
+  opacity: 1;
 }
 
 html {
@@ -545,7 +583,7 @@ dfn {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1em;
   margin: 0.67em 0;
 }
 
@@ -757,7 +795,7 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: 500;
   text-rendering: optimizeLegibility;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.1;
   text-align: center;
 }
@@ -915,6 +953,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-weight: 400;
 }
 
 figure {

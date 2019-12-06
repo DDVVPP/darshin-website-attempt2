@@ -3,7 +3,7 @@
 .site-head {
   position: relative;
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .site-head-container {
@@ -40,23 +40,38 @@
 
 .site-head-left a:hover,
 .site-head-right a:hover {
+  transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
   color: #acacad;
 }
 
 .site-head-right {
   position: relative;
   z-index: 100;
+  margin-right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
 }
 
-.site-head-left a,
-.site-head-right a {
+.site-head-left a {
   display: block;
   margin: 0;
   padding-right: 1rem;
+  padding-left: 0.3rem;
+  padding-top: 0.4rem;
+  color: #868688;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.site-head-right a {
+  display: block;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 0.3rem;
   padding-top: 0.4rem;
   color: #868688;
   font-weight: 400;
@@ -80,7 +95,7 @@
   display: block;
   padding: 10px;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1em;
   font-weight: 400;
   text-transform: uppercase;
@@ -90,6 +105,9 @@
 
 .site-head-logo:hover {
   text-decoration: none;
+  transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
   color: #4b4b4b;
 }
 

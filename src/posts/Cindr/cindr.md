@@ -1,12 +1,13 @@
 ---
 title: "Cindr"
+description: "A story-lined dating app"
 date: "2019-12-03"
 ---
 
-I just launched a new bootcamp!
+A story-lined adventure-styled friendship/dating app.
 
-### Topics Covered
+### Placholder
 
-1. Gatsby
-2. GraphQL
-3. React
+1. Lorem
+2. Ipsum
+3. ?
